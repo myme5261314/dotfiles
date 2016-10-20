@@ -27,7 +27,7 @@ else
     fi
 fi
 
-source ~/.vim/antigen/antigen.zsh
+source ~/library/antigen/antigen.zsh
 # call antigen update on your terminal and it will update the oh-my-zsh repository
 # Load the oh-my-zsh's library.
 antigen bundle robbyrussell/oh-my-zsh lib/
@@ -44,7 +44,7 @@ antigen bundle lein
 antigen bundle command-not-found
 antigen bundle gulp
 antigen bundle node
-antigen bundle npm
+# antigen bundle npm
 antigen bundle nvm
 antigen bundle bower
 
@@ -72,8 +72,8 @@ elif [[ $CURRENT_OS == 'Cygwin' ]]; then
 fi
 
 # chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # zsh
 alias vim="stty stop '' -ixoff ; vim"
@@ -159,64 +159,66 @@ alias e='f -e emacsclient -t' # quick opening files with xdg-open
 
 
 # added by travis gem
-[ -f /Users/guanghui/.travis/travis.sh ] && source /Users/guanghui/.travis/travis.sh
+#[ -f /Users/guanghui/.travis/travis.sh ] && source /Users/guanghui/.travis/travis.sh
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+#export COCOS_CONSOLE_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/tools/cocos2d-console/bin
+#export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/guanghui/Github/fireball
-export PATH=$COCOS_X_ROOT:$PATH
+#export COCOS_X_ROOT=/Users/guanghui/Github/fireball
+#export PATH=$COCOS_X_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+#export COCOS_TEMPLATES_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/templates
+#export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/guanghui/cocos2d-x/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+#export COCOS_CONSOLE_ROOT=/Users/guanghui/cocos2d-x/tools/cocos2d-console/bin
+#export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/guanghui
-export PATH=$COCOS_X_ROOT:$PATH
+#export COCOS_X_ROOT=/Users/guanghui
+#export PATH=$COCOS_X_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/guanghui/cocos2d-x/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+#export COCOS_TEMPLATES_ROOT=/Users/guanghui/cocos2d-x/templates
+#export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/guanghui/Github/fireball/cocos2d-x
-export PATH=$COCOS_X_ROOT:$PATH
+#export COCOS_X_ROOT=/Users/guanghui/Github/fireball/cocos2d-x
+#export PATH=$COCOS_X_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+#export COCOS_CONSOLE_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/tools/cocos2d-console/bin
+#export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+#export COCOS_TEMPLATES_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/templates
+#export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/guanghui/cocos2d-x/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+#export COCOS_CONSOLE_ROOT=/Users/guanghui/cocos2d-x/tools/cocos2d-console/bin
+#export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/guanghui
-export PATH=$COCOS_X_ROOT:$PATH
+#export COCOS_X_ROOT=/Users/guanghui
+#export PATH=$COCOS_X_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/guanghui/cocos2d-x/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+#export COCOS_TEMPLATES_ROOT=/Users/guanghui/cocos2d-x/templates
+#export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+#export COCOS_CONSOLE_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/tools/cocos2d-console/bin
+#export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/guanghui/Github/fireball/cocos2d-x
-export PATH=$COCOS_X_ROOT:$PATH
+#export COCOS_X_ROOT=/Users/guanghui/Github/fireball/cocos2d-x
+#export PATH=$COCOS_X_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+#export COCOS_TEMPLATES_ROOT=/Users/guanghui/Github/fireball/cocos2d-x/templates
+#export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+eval alias fuck='TF_CMD=$(TF_ALIAS=fuck PYTHONIOENCODING=utf-8 TF_SHELL_ALIASES=$(alias) thefuck $(fc -ln -1 | tail -n 1)) && eval $TF_CMD && print -s $TF_CMD'
+eval "$(thefuck --alias)"
