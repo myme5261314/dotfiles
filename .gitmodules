@@ -4,3 +4,6 @@
 [submodule "spacemacs"]
 	path = spacemacs
 	url = git@github.com:myme5261314/spacemacs-my
+[submodule "zshrc"]
+	path = zshrc
+	url = git@github.com:myme5261314/myzshrc
