@@ -1,0 +1,6 @@
+[submodule "vim"]
+	path = vim
+	url = git@github.com:myme5261314/myvimrc
+[submodule "spacemacs"]
+	path = spacemacs
+	url = git@github.com:myme5261314/spacemacs-my
