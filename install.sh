@@ -54,3 +54,14 @@ elif [[ "$platform" == "osx" ]]; then
     #source $(brew --prefix)/share/antigen/antigen.zsh
 fi
 ln -s $root/zshrc/.zshrc ~/.zshrc
+
+
+echo "Install TheFuck..."
+if [[ "$platform" == "linux" ]]; then
+    sudo apt-get install zsh-antigen
+    sudo apt update
+    sudo apt install python3-dev python3-pip
+    sudo -H pip3 install thefuck
+elif [[ "$platform" == "osx" ]]; then
+    brew install thefuck
+fi
