@@ -19,8 +19,26 @@ elif [[ "$unamestr" == "Darwin" ]]; then
    platform="osx"
 fi
 
+# Pre dependencies install.
+if [[ "$platform" == "Linux" ]];then
+    # Useless.
+    sudo apt-get install source-code-pro
+elif [[ "$platform" == "osx" ]];then
+    brew tap caskroom/fonts
+    brew cask install font-source-code-pro
+    brew install ctags
+    brew update
+    brew install macvim --with-lua --with-override-system-vim
+    brew linkapps macvim
+    brew install xz cmake
+    xcode-select --install
+    brew install fasd
+    brew install privoxy
+    brew services start privoxy
+fi
+
 # Checkout to OS branch.
-git checkout origin $platform:$platform
+git fetch origin $platform:$platform
 
 # Pull all submodules.
 git submodule init
@@ -37,13 +55,14 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo "link .vimrc"
 rm ~/.vimrc
 rm ~/.gvimrc
-ln -s $root/vim/vimrc ~/.vimrc
-ln -s $root/vim/vimrc ~/.gvimrc
+ln -s $root/vim/.vimrc ~/.vimrc
+ln -s $root/vim/.vimrc ~/.gvimrc
 
 echo "Install Spacemacs configurations..."
-mv ~/.emacs.d ~/.emacs.d.old
-mv ~/.spacemacs.d ~/.spacemacs.d.old
+mv -f ~/.emacs.d ~/.emacs.d.old
+mv -f ~/.spacemacs.d ~/.spacemacs.d.old
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+cd ~/.emacs.d && git checkout develop && cd $root
 ln -s $root/spacemacs ~/.spacemacs.d
 
 echo "Install zshrc configurations..."
@@ -51,7 +70,6 @@ if [[ "$platform" == "linux" ]]; then
     sudo apt-get install zsh-antigen
 elif [[ "$platform" == "osx" ]]; then
     brew install antigen
-    #source $(brew --prefix)/share/antigen/antigen.zsh
 fi
 ln -s $root/zshrc/.zshrc ~/.zshrc
 
