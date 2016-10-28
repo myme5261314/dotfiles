@@ -34,6 +34,8 @@ elif [[ "$platform" == "osx" ]];then
     xcode-select --install
     brew install fasd
     brew install privoxy
+    echo "\nactionsfile wall.action\n" >> /usr/local/etc/privoxy/config
+    ln -s $root/wall.action /usr/local/etc/privoxy/wall.action
     brew services start privoxy
 fi
 

@@ -1,0 +1,9 @@
+{+forward-override{forward 0.0.0.0:1080}}
+.google.com.hk
+.google.com
+.baidu.com
+.fbcdn.net
+.gstatic.com
+.gmail.com
+.twitter.com
+.youtube.com
