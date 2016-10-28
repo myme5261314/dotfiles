@@ -37,6 +37,14 @@ elif [[ "$platform" == "osx" ]];then
     echo "\nactionsfile wall.action\n" >> /usr/local/etc/privoxy/config
     ln -s $root/wall.action /usr/local/etc/privoxy/wall.action
     brew services start privoxy
+    brew install proxychains-ng
+    mkdir ~/.proxychains
+    ln -sf $root/proxychains.conf ~/.proxychians/proxychains.conf
+    brew install node
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    brew install pandoc
+    brew install fcitx-remote-for-osx
+    pip install jedi
 fi
 
 # Checkout to OS branch.
