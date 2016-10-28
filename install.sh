@@ -83,3 +83,7 @@ if [[ "$platform" == "linux" ]]; then
 elif [[ "$platform" == "osx" ]]; then
     brew install thefuck
 fi
+
+# Pip configuration.
+mkdir ~/.pip
+ln -s $root/pip.conf ~/.pip/pip.conf
