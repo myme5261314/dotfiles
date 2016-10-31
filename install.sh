@@ -45,6 +45,11 @@ elif [[ "$platform" == "osx" ]];then
     brew install pandoc
     brew install fcitx-remote-for-osx
     pip install jedi
+    # Supervisor
+    brew install supervisor
+    # echo_supervisord_conf > /usr/local/etc/supervisord.conf
+    ln -sf $root/supervisor /usr/local/etc/supervisor.d
+
 fi
 
 # Checkout to OS branch.
