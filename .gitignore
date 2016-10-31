@@ -7,3 +7,6 @@ view/
 bundle/*
 !bundle/vundle
 /.gitconfig.local
+aria2/aria2-chrome-log.txt
+aria2/aria2-chrome-error.txt
+aria2/aria2.session
