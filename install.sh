@@ -24,6 +24,7 @@ if [[ "$platform" == "Linux" ]];then
     # Useless.
     sudo apt-get install source-code-pro
 elif [[ "$platform" == "osx" ]];then
+    # Emacs.
     brew tap caskroom/fonts
     brew cask install font-source-code-pro
     brew install ctags
@@ -40,6 +41,8 @@ elif [[ "$platform" == "osx" ]];then
     brew install proxychains-ng
     mkdir ~/.proxychains
     ln -sf $root/proxychains.conf ~/.proxychians/proxychains.conf
+    proxychains4 brew cask install dropbox
+    ln -sf ~/Dropbox/org ~/org-notes
     brew install node
     npm install -g cnpm --registry=https://registry.npm.taobao.org
     brew install pandoc
