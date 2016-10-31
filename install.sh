@@ -49,6 +49,8 @@ elif [[ "$platform" == "osx" ]];then
     brew install supervisor
     # echo_supervisord_conf > /usr/local/etc/supervisord.conf
     ln -sf $root/supervisor /usr/local/etc/supervisor.d
+    # aria2-yaaw backend by supervisor.
+    ln -sf $root/aria2 ~/.aria2
 
 fi
 
