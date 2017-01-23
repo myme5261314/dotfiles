@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=aria2c-yaaw
+Exec=aria2c --conf-path=~/.aria2/aria2/aria2-chrome.conf
+#Icon=<full path to icon>
+#Comment=<optinal comments>
+X-GNOME-Autostart-enabled=true
