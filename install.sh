@@ -55,6 +55,13 @@ elif [[ "$platform" == "osx" ]];then
     # aria2-yaaw backend by supervisor.
     ln -sf $root/aria2 ~/.aria2
 
+    # RescueTime
+    brew cask install rescuetime
+    # Doxymacs
+    brew install doxymacs
+    # Virtualbox
+    brew cask install virtualbox
+
 fi
 
 # Checkout to OS branch.
