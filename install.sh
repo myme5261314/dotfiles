@@ -61,8 +61,8 @@ if [[ "$platform" == "linux" ]];then
     cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
     dropbox start
     ln -sf ~/Dropbox/org ~/org-notes
-    sudo apt-fast install -y nodejs npm
-    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    sudo apt-fast install -y nodejs nodejs-legacy npm
+    sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
     sudo apt-fast install -y pandoc
     sudo pip install jedi
     sudo apt-fast install -y supervisor
@@ -167,3 +167,6 @@ fi
 # Pip configuration.
 mkdir ~/.pip
 ln -sf $root/pip.conf ~/.pip/pip.conf
+
+# Tern for javascript on Emacs.
+sudo cnpm install -g tern
